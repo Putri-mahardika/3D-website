@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Optimization -->
+    <title>Juice Burst 3D — Sensasi Jus enak  danMenyehatkan</title>
+    <meta name="description" content="Rasakan kesegaran dan energi instan dari Juice Burst. Dibuat 100% dari buah-buahan segar alami berkualitas tanpa bahan pengawet. Pilih rasa favoritmu secara interaktif!" />
+    <meta name="keywords" content="jus buah, juice boost, juice burst, minuman segar, diet sehat, antioksidan, detoksifikasi alami" />
+    <meta name="author" content="Juice Burst F&B" />
+
+    <!-- Favicon link -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥤</text></svg>" />
+    <script type="module" crossorigin src="/3D-website/assets/index-CJqdva9w.js"></script>
+    <link rel="stylesheet" crossorigin href="/3D-website/assets/index-uIvvAif3.css">
+  </head>
+  <body>
+    <!-- App Container holding background and layout -->
+    <div id="app" class="app-container">
+      
+      <!-- 3D WebGL Canvas behind the UI -->
+      <div id="canvas-container" aria-label="3D model view of the juice cup and floating fruits"></div>
+
+      <!-- Navigation Header -->
+      <header>
+        <div class="logo" id="header-logo">
+          <span>BURST</span> JUICE
+        </div>
+        <nav aria-label="Navigasi Utama">
+          <ul>
+            <li><a href="#home" class="active" id="nav-home">Home</a></li>
+            <li><a href="#menu" id="nav-menu">Menu</a></li>
+            <li><a href="#nutrition" id="nav-nutrition">Nutrition</a></li>
+            <li><a href="#story" id="nav-story">Our Story</a></li>
+          </ul>
+        </nav>
+        <button class="btn-header-order pulse" id="btn-header-order" type="button">
+          Order Now
+        </button>
+      </header>
+
+      <!-- Section 1: Hero View (The main landing screen) -->
+      <section class="section-scroll section-hero" id="home">
+        <main>
+          <!-- Left Column: Catchy Text descriptions -->
+          <div class="hero-content" aria-labelledby="hero-title">
+            <div class="badge-fresh" id="flavor-badge">100% Fresh Organic</div>
+            <h1 class="juice-title" id="hero-title">
+              Mango Magic
+              <span id="hero-title-sub">Ledakan Energi Tropis</span>
+            </h1>
+            <p class="juice-tagline" id="hero-description">
+              Kesegaran mangga harum manis dipadukan dengan sentuhan daun mint segar untuk energi instan harianmu.
+            </p>
+            
+            <div class="order-actions">
+              <div class="juice-price" id="hero-price">Rp 35.000</div>
+              <button class="btn-buy" id="btn-buy" type="button">
+                <span>Beli Sekarang</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="9" cy="21" r="1"></circle>
+                  <circle cx="20" cy="21" r="1"></circle>
+                  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Column: Translucent interactive panels -->
+          <div class="side-panels">
+            <!-- Nutrition Panel -->
+            <div class="glass-panel nutrition-panel" id="panel-nutrition">
+              <h3>Informasi Nutrisi <span>per 250ml</span></h3>
+              <div class="nutrition-grid">
+                <div class="nutrition-item">
+                  <span class="nutrition-value" id="nutr-calories">180 kcal</span>
+                  <span class="nutrition-label">Kalori</span>
+                </div>
+                <div class="nutrition-item">
+                  <span class="nutrition-value" id="nutr-vitc">120%</span>
+                  <span class="nutrition-label">Vit C</span>
+                </div>
+                <div class="nutrition-item">
+                  <span class="nutrition-value" id="nutr-fiber">3.5g</span>
+                  <span class="nutrition-label">Serat</span>
+                </div>
+                <div class="nutrition-item">
+                  <span class="nutrition-value" id="nutr-sugar">32g</span>
+                  <span class="nutrition-label">Gula</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Benefits Bullet points -->
+            <div class="glass-panel benefits-panel" id="panel-benefits">
+              <h3>Manfaat Kesehatan</h3>
+              <ul class="benefits-list" id="benefits-list">
+                <li class="benefit-item">
+                  <div class="benefit-icon">✓</div>
+                  <span>Kaya Vitamin A & C untuk imun tubuh</span>
+                </li>
+                <li class="benefit-item">
+                  <div class="benefit-icon">✓</div>
+                  <span>Antioksidan beta-karoten yang tinggi</span>
+                </li>
+                <li class="benefit-item">
+                  <div class="benefit-icon">✓</div>
+                  <span>Energi alami instan dari glukosa buah</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </main>
+
+        <!-- Bottom Interactive Flavor Switcher Bar -->
+        <footer>
+          <div class="flavor-switcher" role="radiogroup" aria-label="Pilih Varian Rasa Jus">
+            <button class="flavor-btn active" data-flavor="mango" id="flavor-mango" role="radio" aria-checked="true" type="button">
+              <span class="dot"></span>
+              Mango Magic
+            </button>
+            <button class="flavor-btn" data-flavor="berry" id="flavor-berry" role="radio" aria-checked="false" type="button">
+              <span class="dot"></span>
+              Berry Blast
+            </button>
+            <button class="flavor-btn" data-flavor="green" id="flavor-green" role="radio" aria-checked="false" type="button">
+              <span class="dot"></span>
+              Green Glow
+            </button>
+          </div>
+        </footer>
+      </section>
+
+      <!-- Section 2: The Art of Cold-Pressed (Splashing Fruits Showcase) -->
+      <section class="section-scroll section-fruits" id="menu">
+        <div class="glass-showcase-grid">
+          <div class="showcase-card visual-card">
+            <img src="/3D-website/assets/banner_fruits.jpg" alt="Cold-pressed organic splashing fruits illustration" class="showcase-img" id="img-showcase-fruits" />
+            <div class="visual-glow-overlay"></div>
+          </div>
+          <div class="glass-panel showcase-card text-card">
+            <div class="badge-fresh">cold-pressed perfection</div>
+            <h2>Seni dalam Setiap Tetesan Segar</h2>
+            <p>
+              Kami percaya bahwa jus buah premium bukan sekadar minuman penyegar, melainkan sebuah karya seni nutrisi alami. Melalui metode <strong>Cold-Pressed</strong>, buah-buahan segar utuh diekstrak secara perlahan tanpa menghasilkan panas sama sekali.
+            </p>
+            <p>
+              Teknik ini menjaga 100% kandungan enzim aktif, vitamin vital, antioksidan, serat makanan, serta mempertahankan warna alami buah yang cerah dan cita rasa manis buah murni yang kaya seperti aslinya.
+            </p>
+            <ul class="quality-tags">
+              <li><span>🌱</span> 100% Organik</li>
+              <li><span>🚫</span> Tanpa Gula Buatan</li>
+              <li><span>🧪</span> Bebas Pengawet</li>
+              <li><span>🥤</span> Dibuat Segar Tiap Hari</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Signature Blend Showcase ( Ribbed Green Cups ) -->
+      <section class="section-scroll section-signature" id="nutrition">
+        <div class="glass-showcase-grid reverse">
+          <div class="glass-panel showcase-card text-card">
+            <div class="badge-fresh" style="background: rgba(57, 181, 74, 0.15); color: #39b54a; border-color: rgba(57, 181, 74, 0.3)">signature ribbed cups</div>
+            <h2>Janji Kesegaran Cangkir Hijau</h2>
+            <p>
+              Cangkir hijau bertekstur garis-garis (*ribbed green cups*) kami telah lama menjadi lambang global dari kultur gaya hidup sehat yang segar dan dinamis.
+            </p>
+            <p>
+              Dirancang khusus dengan material ramah lingkungan yang mampu menjaga insulasi temperatur dingin cangkir secara optimal. Cangkir hijau ini adalah janji kami kepada Anda bahwa setiap tetes jus di dalamnya adalah perpaduan rasa segar yang penuh kebugaran, murni, dan higienis.
+            </p>
+            <div class="quote-box">
+              "Kesehatan optimal dimulai dari apa yang kita minum secara rutin."
+            </div>
+          </div>
+          <div class="showcase-card visual-card">
+            <img src="/3D-website/assets/banner_cups.jpg" alt="Signature ribbed green cups with colorful fresh smoothies" class="showcase-img" id="img-showcase-cups" />
+            <div class="visual-glow-overlay green"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Our Story & Philosophy ( Composite Visual ) -->
+      <section class="section-scroll section-journey" id="story">
+        <div class="glass-panel wide-showcase-card">
+          <div class="wide-card-grid">
+            <div class="wide-card-text">
+              <div class="badge-fresh" style="background: rgba(230, 26, 77, 0.15); color: #e61a4d; border-color: rgba(230, 26, 77, 0.3)">our story & philosophy</div>
+              <h2>Dari Kebun Lokal ke Studio Dapur Kami</h2>
+              <p>
+                Setiap buah yang kami blender dikurasi secara ketat dan diperoleh langsung secara etis dari perkebunan buah lokal. Kami bermitra dengan petani lokal untuk memastikan semua bahan dipetik tepat saat mencapai tingkat kematangan paling optimal dan manis alami.
+              </p>
+              <p>
+                Dari pertanian berkelanjutan, bahan-bahan segar langsung diantar ke dapur studio kami setiap pagi hari, dicuci bersih, dan segera diracik secara segar saat Anda memesannya. Kesegaran adalah prioritas nomor satu kami.
+              </p>
+              <div class="cta-banner-row">
+                <button class="btn-buy pulse" id="btn-cta-find" type="button" style="margin-top: 1.5rem">
+                  <span>Temukan Outlet Terdekat</span>
+                </button>
+              </div>
+            </div>
+            <div class="wide-card-visual">
+              <img src="/3D-website/assets/banner_variants.jpg" alt="Juice studio journey composite showcase" class="showcase-img" id="img-showcase-journey" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Slide-out Mini Cart Drawer -->
+      <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-title" aria-modal="true" role="dialog">
+        
+        <div class="cart-header">
+          <h2 id="cart-title">Pesanan Kamu</h2>
+          <button class="btn-close-cart" id="btn-close-cart" aria-label="Tutup Keranjang" type="button">✕</button>
+        </div>
+
+        <div class="cart-items">
+          <!-- Single Cart Item container -->
+          <div class="cart-item">
+            <div class="cart-item-preview" id="cart-item-emoji">🥭</div>
+            <div class="cart-item-details">
+              <div class="cart-item-name" id="cart-item-name">Mango Magic</div>
+              <div class="cart-item-price" id="cart-item-price">Rp 35.000</div>
+              <div class="cart-item-qty">
+                <button class="qty-btn" id="btn-qty-minus" type="button" aria-label="Kurangi jumlah">-</button>
+                <span class="qty-val" id="qty-value">1</span>
+                <button class="qty-btn" id="btn-qty-plus" type="button" aria-label="Tambah jumlah">+</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Customizable Extra Toppings -->
+          <div class="customizations-section">
+            <h3 class="custom-title">Tambahan Topping (+Rp 3.000)</h3>
+            <div class="toppings-grid">
+              <div>
+                <input type="checkbox" id="topping-chia" class="topping-checkbox" data-price="3000">
+                <label for="topping-chia" class="topping-label">
+                  <span>Chia Seeds</span>
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" id="topping-protein" class="topping-checkbox" data-price="3000">
+                <label for="topping-protein" class="topping-label">
+                  <span>Whey Protein</span>
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" id="topping-aloe" class="topping-checkbox" data-price="3000">
+                <label for="topping-aloe" class="topping-label">
+                  <span>Aloe Vera</span>
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" id="topping-jelly" class="topping-checkbox" data-price="3000">
+                <label for="topping-jelly" class="topping-label">
+                  <span>Coconut Jelly</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Checkout calculation panel -->
+        <div class="cart-footer">
+          <div class="cart-summary-row">
+            <span>Subtotal Produk</span>
+            <span id="summary-subtotal">Rp 35.000</span>
+          </div>
+          <div class="cart-summary-row">
+            <span>Tambahan Topping</span>
+            <span id="summary-toppings">Rp 0</span>
+          </div>
+          <div class="cart-summary-total">
+            <span>Total Bayar</span>
+            <span id="summary-total">Rp 35.000</span>
+          </div>
+          <button class="btn-checkout" id="btn-checkout" type="button">
+            Konfirmasi Pesanan
+          </button>
+        </div>
+
+      </aside>
+
+      <!-- Clickable Cart Drawer Overlay -->
+      <div class="cart-overlay" id="cart-overlay"></div>
+
+    </div>
+
+    <!-- Script Entrypoint -->
+  </body>
+</html>
